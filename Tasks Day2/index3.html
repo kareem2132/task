@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #1e3a8a, #10b981);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background: #fff;
+            padding: 10px;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        input, select, textarea, button {
+            display: block;
+            margin: 5px auto;
+            width: 200px;
+            padding: 5px;
+        }
+        button {
+            background-color: #10b981;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <label>Full Name</label>
+        <input type="text"><br>
+        <label>Email</label>
+        <input type="email"><br>
+        <label>Gender</label>
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+        </select><br>
+        <label>Message</label>
+        <textarea rows="3"></textarea><br>
+        <button type="submit">Send</button>
+    </div>
+</body>
+</html>

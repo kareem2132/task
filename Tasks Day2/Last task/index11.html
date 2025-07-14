@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>التقدير</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #result {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .excellent { background-color: #2ecc71; }
+    .very-good { background-color: #27ae60; }
+    .good { background-color: #f1c40f; }
+    .weak { background-color: #e67e22; }
+    .fail { background-color: #e74c3c; }
+  </style>
+</head>
+<body>
+
+  <h1>Karim</h1>
+
+  <input type="number" id="grade" placeholder="ادخل الدرجة من 0 إلى 100">
+  <button onclick="calculate()">احسب التقدير</button>
+
+  <div id="result"></div>
+
+  <script>
+    function calculate() {
+      let grade = Number(document.getElementById("grade").value);
+      let resultDiv = document.getElementById("result");
+      let result = "";
+      let className = "";
+
+      if (grade >= 90) {
+        result = "ممتاز";
+        className = "excellent";
+      } else if (grade >= 80) {
+        result = "جيد جداً";
+        className = "very-good";
+      } else if (grade >= 70) {
+        result = "جيد";
+        className = "good";
+      } else if (grade >= 60) {
+        result = "ضعيف";
+        className = "weak";
+      } else {
+        result = "راسب";
+        className = "fail";
+      }
+
+      resultDiv.textContent = result;
+      resultDiv.className = className;
+      resultDiv.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

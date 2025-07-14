@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5 Cards</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #007bff, #307e42);
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 2px dashed #aaa;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: box-shadow 0.5s ease-in-out;
+    }
+    .card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .btn {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background 0.5s ease-in-out;
+    }
+    .btn:hover {
+      background: #28a745;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h3>Submit Form</h3>
+      <p>This card is for submitting forms.</p>
+      <button class="btn">Send</button>
+    </div>
+
+    <div class="card">
+      <h3>Table</h3>
+      <table>
+        <tr><th>#</th><th>Item</th></tr>
+        <tr><td>1</td><td>Html</td></tr>
+        <tr><td>2</td><td>Css</td></tr>
+      </table>
+      <button class="btn">Send</button>
+    </div>
+
+    <div class="card">
+      <h3>Unordered List</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <button class="btn">Send</button>
+    </div>
+  </div>
+</body>
+</html>

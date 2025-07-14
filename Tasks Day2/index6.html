@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Page</title>
+  <style>
+    body {
+      background: linear-gradient(to right, blue, black);
+      font-family: 'Comic Sans MS';
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    label, input, select, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 7px;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
+    textarea {
+      resize: none;
+      height: 100px;
+      border: 2px dashed #000;
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 6px;
+      text-align: left;
+    }
+    thead th {
+      background: #007bff;
+      color: #fff;
+    }
+    .latin-list {
+      list-style-type: lower-latin;
+    }
+  </style>
+</head>
+<body>
+  <div class="container login-form" id="form-section">
+    <form id="user-form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email">
+
+      <label for="gender">Gender:</label>
+      <select id="gender">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea id="message"></textarea>
+
+      <button>Send Data</button>
+    </form>
+
+    <h3>Frontend Technologies to Learn:</h3>
+    <ol class="latin-list">
+      <li>HTML</li><li>CSS</li><li>JavaScript</li>
+    </ol>
+    <ol>
+      <li>HTML</li><li>CSS</li><li>JavaScript</li>
+    </ol>
+
+    <h3>Shopping List:</h3>
+    <ul><li>Milk</li><li>Bread</li><li>Eggs</li></ul>
+    <ul><li>Milk</li><li>Bread</li><li>Sugar</li></ul>
+
+    <table id="grades-table">
+      <thead>
+        <tr><th>#</th><th>Name</th><th>Subject</th><th>Grade</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Ahmed</td><td>Math</td><td>95</td></tr>
+        <tr><td>2</td><td>Salma</td><td>Science</td><td>88</td></tr>
+        <tr><td>3</td><td>Sami</td><td>Geography</td><td>75</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
