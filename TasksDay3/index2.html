@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <style>
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #ced4da;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+
+<div class="container mt-5">
+
+  <h2 class="text-center mb-4">Table data</h2>
+
+  <table class="table table-bordered text-center">
+    <thead class="table-primary">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Sarah Nabil</td>
+        <td>sara@gmail.com</td>
+        <td>Editor</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mostafa Ayman</td>
+        <td>mostafa@gmail.com</td>
+        <td>Admin</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Laila Tarek</td>
+        <td>laila@gmail.com</td>
+        <td>Viewer</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form class="needs-validation mt-4" novalidate>
+    <input type="text" class="form-control mb-3" placeholder="الاسم" required>
+    <input type="text" class="form-control mb-3" placeholder="الرقم القومي" required pattern="\d{14}">
+    <input type="email" class="form-control mb-3" placeholder="الإيميل" required>
+    <input type="text" class="form-control mb-3" placeholder="رقم الهاتف" required pattern="\d{10,15}">
+
+    <button class="btn btn-primary w-100">تسجيل</button>
+    <button type="button" class="btn btn-secondary w-100 mt-2" data-bs-toggle="modal" data-bs-target="#myModal">
+      اقرأ المزيد
+    </button>
+  </form>
+
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">معلومة</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        اتأكد من بياناتك .
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" data-bs-dismiss="modal">إغلاق</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+    if (!this.checkValidity()) e.preventDefault();
+    this.classList.add('was-validated');
+  });
+</script>
+
+</body>
+</html>
